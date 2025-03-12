@@ -20,6 +20,8 @@ const TransactionForm = ({ onAdd }: Props) => {
   const [category, setCategory] = useState("");
   const [date, setDate] = useState(() => new Date().toISOString().split("T")[0]);
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -39,7 +41,7 @@ const TransactionForm = ({ onAdd }: Props) => {
 
 
       // Send Post request to FastAPI backend
-      const response = await fetch("http://localhost:8000/transactions", {
+      const response = await fetch(`${API_URL}/transactions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

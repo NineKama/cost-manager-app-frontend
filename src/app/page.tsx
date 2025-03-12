@@ -12,11 +12,13 @@ export default function Home() {
     setTransactions((prev) => [...prev, { ...transaction, id: prev.length + 1 }]);
   };
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
   //fetch transactions from backend
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const response = await fetch("http://localhost:8000/transactions");
+        const response = await fetch(`${API_URL}/transactions`);
         if (!response.ok) {
           throw new Error("Failed to fetch transactions"); 
         }
