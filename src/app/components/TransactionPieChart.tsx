@@ -1,6 +1,6 @@
 "use client";
 
-import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import { Transaction } from "./TransactionForm";
 
 interface Props {
@@ -22,7 +22,7 @@ const TransactionPieChart = ({ transactions }: Props) => {
   }));
 
   if (data.length === 0) {
-    return <p className="text-gray-500 text-center">Don't have data</p>;
+    return <p className="text-gray-500 text-center">You don&apos;t have transactions</p>;
   }
 
   return (

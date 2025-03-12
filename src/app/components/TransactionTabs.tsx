@@ -4,7 +4,6 @@ import { useState } from "react";
 import TransactionTable from "./TransactionTable";
 import TransactionPieChart from "./TransactionPieChart";
 import { Transaction } from "./TransactionForm";
-import { get } from "http";
 
 interface Props {
   transactions: Transaction[];

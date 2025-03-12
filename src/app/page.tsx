@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import TransactionForm, { Transaction } from "./components/TransactionForm";
-import TransactionTable from "./components/TransactionTable";
 import TransactionTabs from "./components/TransactionTabs";
 import DarkModeToggle from "./components/DarkmodeToggle";
 
